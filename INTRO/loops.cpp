@@ -68,12 +68,78 @@ int main(){
         cout << "Iteration: " << i << endl;
     }
 
+    // Using do-while loop
+    int k = 0;
+    do {
+        cout << "Do-while loop iteration: " << k << endl;
+        k++;
+    } while (k < 5);
+
+
+
     // Using while loop
     int j = 0;
     while (j < 5) {
         cout << "While loop iteration: " << j << endl;
         j++;
     }
+    // Using break and continue statements
+    for (int i = 0; i < 10; i++) {
+        if (i == 5) {
+            cout << "Breaking the loop at i = " << i << endl;
+            break; // Breaks the loop when i is 5
+        }
+        cout << "Loop iteration: " << i << endl;
+    }
+    for (int i = 0; i < 10; i++) {
+        if (i % 2 == 0) {
+            cout << "Skipping even number: " << i << endl;
+            continue; // Skips the rest of the loop body for even numbers
+        }
+        cout << "Odd number: " << i << endl;
+    }
+    // Using range-based for loop
+    int arr[] = {1, 2, 3, 4, 5};
+    cout << "Using range-based for loop:" << endl;
+    for (int num : arr) {
+        cout << "Array element: " << num << endl;
+    }
+    // Using nested loops
+    cout << "Using nested loops:" << endl;
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            cout << "i: " << i << ", j: " << j << endl;
+        }
+    }
+    // Using loop control variables
+    int loopControl = 0;
+    for (int i = 0; i < 5; i++) {
+        loopControl += i;
+        cout << "Loop control variable value: " << loopControl << endl;
+    }
+
+    // Using break and continue in nested loops
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            if (i == j) {
+                cout << "Breaking inner loop at i = " << i << ", j = " << j << endl;
+                break; // Breaks the inner loop when i equals j
+            }
+            cout << "i: " << i << ", j: " << j << endl;
+        }
+    }
+
+    // infinite loop example
+    int count = 0;
+    while (true) {
+        cout << "Infinite loop iteration: " << count << endl;
+        count++;
+        if (count == 5) {
+            cout << "Breaking infinite loop at count = " << count << endl;
+            break; // Breaks the infinite loop after 5 iterations
+        }
+    }
+    
 
     return 0;
 }
